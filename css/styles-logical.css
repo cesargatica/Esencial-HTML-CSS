@@ -52,9 +52,11 @@ a {
 .header-content {
   /*  position: relative;
     inset-block-start: 65px;*/
+    padding-inline: 20px;
 }
 
 header {
+    margin-block-start: 20px;
     font-size: 14px; 
     color: var(--white);
    /* position: absolute;*/
@@ -91,8 +93,8 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 60px;
-    margin-block-start: 64px;
+    font-size: 40px;
+    margin-block-start: 20px;
     margin-block-end: 16px;
     /* font-size: 3.75em;*/ 
 }
@@ -133,7 +135,7 @@ p {
     background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
     /*background-repeat: no-repeat; por si quieres que no se repita el patrón*/
     /*background-position: left 50px bottom -50px; por si quieres acomodarlo en otras posiciones*/
-    height: 350px;
+    block-size: 50px;
 }
 
 .section-content img {
@@ -257,6 +259,9 @@ blockquote p {
 }
 
 @media screen and (min-width: 1366px){
+    .hero {
+        block-size: 350px;
+    }
     .header {
         position: sticky;
         inset-block-start: -45px;
@@ -265,6 +270,7 @@ blockquote p {
     .header-content {
         position: relative;
         inset-block-start: 65px;
+        padding-inline: 0;
     }
     
     header {
@@ -272,5 +278,9 @@ blockquote p {
         inset-block-start: 0;
         inset-inline-start: -208px;
         inline-size: 188px;
+    }
+    h1 {
+        font-size: 60px;
+        margin-block-start: 64px;
     }
 }
