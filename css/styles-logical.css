@@ -30,31 +30,52 @@
     font-size: 16px;
     --white30:white;
     --white20:#A5A3A5;
-    --white10:#616161;
+    --white10:#3a3539;
 }
 
 body {
     color: var(--white30);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     /*font-family: charter;*/
     background: #251F24;
+    margin: 0;
 }
 
 a {
     color: var(--white30);
 }
+.header {
+   /* position: sticky;
+    inset-block-start: -45px;*/
+}
+
+.header-content {
+  /*  position: relative;
+    inset-block-start: 65px;*/
+}
 
 header {
     font-size: 14px; 
     color: var(--white);
+   /* position: absolute;*/
+    /*arriba*/
+   /* inset-block-start: 0;*/
+    /*abajo
+    inset-block-end: ;
+    izquierda*/
+    /*inset-inline-start: -208px;*/
+    /*derecha
+    inset-inline-end: ;*/
+   /* inline-size: 188px;*/
 }
 
 header li {
     color: var(--white20);
+    margin-block-end: 16px;
 }
 
 header a {
-    /*color: var(--white20);*/
+    color: var(--white20);
     text-decoration: none;
 } 
 header a:hover {
@@ -65,22 +86,43 @@ nav details summary {
 font-weight: bold;
 }
 
+h1, h2, h3 {
+    font-weight: normal;  
+}
+
 h1 {
     font-size: 60px;
-    /* font-size: 3.75em;*/
+    margin-block-start: 64px;
+    margin-block-end: 16px;
+    /* font-size: 3.75em;*/ 
 }
 
 h2 {
     font-size: 2em;
+    margin-block: 40px
 }
 
 h3 {
     font-size: 24px;
    /* font-size: 1.5em;*/
+   font-weight: 600;
+   margin-block: 16px
+}
+
+hr {
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);
 }
 
 pre {
-    background: #fec62e;
+    background: var(--white10);
+    padding: 40px;
+    overflow: auto;
+    border-radius: 8px;
+    border: 10px solid #5551ff;
+    box-shadow: -10px 10px 0 0  #abaaf6;
+    margin-block-end: 30px;
+    /*border-start-start-radius: 60px;*/
 }
 
 p {
@@ -88,10 +130,17 @@ p {
 }
 
 .hero {
-    background-image: linear-gradient(to top,rgba(255,255,255,.3), transparent), url('../Images/patron-1.png');
+    background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
     /*background-repeat: no-repeat; por si quieres que no se repita el patrón*/
     /*background-position: left 50px bottom -50px; por si quieres acomodarlo en otras posiciones*/
     height: 350px;
+}
+
+.section-content img {
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+    /*max-width: 100%;*/
 }
 
 .section-content {
@@ -103,13 +152,125 @@ p {
 }
 
 .section-content h3::before {
-    content: counter(titlelist, decimal);
+    content: counter(titlelist, decimal)'. ';
 }
 
-.section-content h3::after {
+/*.section-content h3::after {
     content: '';
     width: 32px;
     height: 4px;
     background: var(--white30);
     display: inline-block;
+}*/
+
+blockquote {
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--white10);
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 24px;
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+}
+
+blockquote p {
+    color: var(--white30);
+}
+
+.main hr {
+    display: none;
+}
+
+.main {
+/*border: 1px solid red;*/
+}
+
+.wrapper {
+    max-inline-size: 902px;
+    /*block-size: 100px;*/
+    margin: auto;
+}
+
+.main-content {
+    padding-inline: 16px;
+    /*border: 1px solid blue;*/
+}
+
+.slider {
+    /*border: 1px solid red;*/
+}
+
+.slider-container {
+    /*block-size: 100px;*/
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: var(--white10);
+    border-radius: 50%;
+}
+
+.form input{
+   inline-size: 100%;
+   border: 1px solid var(--white30);
+   background: #251f24;
+   box-sizing: border-box;
+   border-radius: 8px;
+   padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+    background: #157efb;
+    border: none;
+}
+
+.form input::-webkit-input-placeholder {
+    color: var(--white20);
+}
+
+@media screen and (min-width: 1366px){
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+    }
+    
+    header {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }
 }
