@@ -28,32 +28,37 @@
 
 :root {
     font-size: 16px;
-    --gray30:#212121;
-    --gray20:#212429;
-    --gray10:#616161;
+    --white30:white;
+    --white20:#A5A3A5;
+    --white10:#616161;
 }
 
 body {
-    color: var(--gray30);
+    color: var(--white30);
     font-family: 'Roboto', sans-serif;
     /*font-family: charter;*/
+    background: #251F24;
 }
 
 a {
-    color: var(--gray30);
+    color: var(--white30);
 }
 
 header {
     font-size: 14px; 
-    color: var(--gray10);
+    color: var(--white);
+}
+
+header li {
+    color: var(--white20);
 }
 
 header a {
-    color: var(--gray10);
+    /*color: var(--white20);*/
     text-decoration: none;
 } 
 header a:hover {
-    color: var(--gray);
+    color: var(--white);
 }
 
 nav details summary {
@@ -76,6 +81,10 @@ h3 {
 
 pre {
     background: #fec62e;
+}
+
+p {
+    color: var(--white20);
 }
 
 .hero {
@@ -101,6 +110,6 @@ pre {
     content: '';
     width: 32px;
     height: 4px;
-    background: var(--gray30);
+    background: var(--white30);
     display: inline-block;
 }
